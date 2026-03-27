@@ -1,0 +1,7 @@
+A = Ga
+B = Gb
+LG = AB = G^2ab
+L = Gab
+
+A + B = G(a+b)가 최소 -> a, b 비슷 걍 브루트 포스
+

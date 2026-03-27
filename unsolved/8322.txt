@@ -1,0 +1,34 @@
+(K, N)
+
+a(K, N) + b(N, K) = (x2-x1, y2-y1)
+
+aK + bN = x2-x1
+aN + bK = y2-y1
+
+aKN + bN^2 = N(x2-x1)
+aKN +bK^2 = K(y2-y1)
+
+b(N^2-K^2) = N(x2-x1) - K(y2-y1)
+
+if (N == K || N == -K) && (N * (x2 - x1) - K * (y2 - y1) != 0) {
+    NIE:
+}
+
+if (N == K || N == -K) && (N * (x2 - x1) - K * (y2 - y1) == 0) {
+    b : 모든 정수
+    aK + bN = x2-y1; 해 존재여부
+    c = x2-x1
+    if (c % gcd(K, N)) -> 존재
+    else -> 존재x
+}
+
+aK = x2-x1 - bN
+
+if (K == 0) {
+    if (x2-x1-bN!=0) {
+        nie;
+    } else {
+        tak;
+    }
+}
+

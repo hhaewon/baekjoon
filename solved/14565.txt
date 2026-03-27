@@ -1,0 +1,19 @@
+// Ax + Ny = 1
+
+// r0 = q0*r1 + r2
+// r1 = q1*r2 + r3
+...
+s0 = 1
+s1 = 0
+t0 = 0
+t1 = 1
+r0 = a
+r1 = b
+q = r1
+
+ri+2 = ri - qi * r_i+1
+
+while (r1):
+    q = r1/r2
+    
+    r2 = r1-r2*q

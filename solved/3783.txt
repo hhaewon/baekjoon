@@ -1,0 +1,18 @@
+T : testcase 개수
+
+solve(n) : 세제곱근 찾는 함수
+left = Decimal('0')
+right = Deicmal('E+451')
+
+error = Deicmal(E-20)
+mid = Decimal(0)
+while (right-left > error):
+    mid = (left+right)/2
+    if (f(left)f(mid) < 0):
+        right = mid
+    else if (f(left)f(mid) > 0):
+        left = mid
+    else:
+
+print('{:.10f}'.format(mid))
+f(x) = x^3-a의 해

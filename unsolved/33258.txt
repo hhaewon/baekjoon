@@ -1,0 +1,65 @@
+일단 A[i] 정렬
+
+5 4
+
+WLOG
+A1 >= A2 >= ... >= AN
+
+
+호감도 함수 f(x) ~~
+
+left = AN
+right = A1
+
+이분탐색 조져줌
+
+5 4
+left = 4
+right = 5
+mid = 4
+-> getgood(4)
+
+result = -2
+result += 4
+-> result = 2
+
+
+ex) N = 4
+L = 5
+A : 9 8 7 5
+
+getgood(6) = -6-4-2+6 = -6
+getgood(7) = -4-2+7+7 = 8 > 5 -> 7이 정답
+
+left = 5
+right = 9
+
+
+mid = 7
+
+getgood(7) = 8 > 5
+right = 7
+
+mid = 6
+getgood(6) = -6 < L -L left = 6
+
+ex) N = 4
+L = 8
+A : 9 8 7 5
+
+getgood(6) = -6-4-2+6 = -6
+getgood(7) = -4-2+7+7 = 8 < 5 -> 7이 정답
+
+left = 5
+right = 9
+
+
+mid = 7
+
+getgood(7) = 8 = L -> 7이 정답
+right = 7
+
+mid = 6
+getgood(6) = -6 < L -L left = 6
+
+ 

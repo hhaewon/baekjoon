@@ -1,0 +1,19 @@
+horizontal[i][j] y = i x = j가 오른쪽 끝이 되도록 이동하는 경우의 수
+vertical[i][j] y = i, x = j가 아래쪽 끝이 되도로 이동하는 경우의 수
+diagonal[i][j] y = i, x = j가 오른쪽 아래끝이 되로록 이동하는 경우의 수
+
+horizontal[0][0] = 0
+vertical[0][0] = 0
+diagonal[0][0] = 0
+horizontal[0][1] = 1
+diagonal[0][1] = 0
+diagonal[1][0] = 0
+
+vertical[i][j] = vertical[i-1][j] + diagonal[i-1][j] (i>=1, j>=0)
+horizontal[i][j] = horizontal[i][j-1] + diagonal[i][j-1] (i>=0, j>=1)
+diagonal[i][j] = vertical[i-1][j-1]+horizontal[i-1][j-1]+diagonal[i-1][j-1] (i>=1, j>=1)
+
+
+i+j = 0~2N-2
+
+ 

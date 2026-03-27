@@ -1,0 +1,45 @@
+row[i][j] : i행에 j가 있는지 (0<=i<9, 0<=j<=9)
+col[i][j] : i열에 j가 있는지 (0<=i<9, 0<=j<=9)
+small[i][j][k] : 작은 박스 i행 j열에 k가 있는지 (0<=i<3, 0<=j<3, 0<=k<=9)
+board[i][j] 
+
+입력받기
+for i in range(9):
+    arr = list(map(int, input().split()))
+    for j in range(9):
+        if j == 0:
+            continue
+        row[i][arr[j]] = 1
+        row[j][arr[j]] = 1
+        small[i/3][j/3] = 1
+
+go(x, y) : x행 j열에 채우기
+
+def go(x, y):
+    if x == 9:
+        return
+
+    if board[x][y]:
+        if (y != 8):
+            go(x, y+1)
+        else:
+            go(x+1, 0)
+        return
+
+    for k in range(10):
+        if (row[x][k] or col[y][k] or small[x/3][y/3][k]):
+            continue
+        row[x][k] = 1
+        col[y][k] = 1
+        small[x/3][y/3][k] = 1
+        board[x][y] = k
+        if (y != 8):
+            go(x, y+1)
+        else:
+            go(x+1, 0)
+        row[x][k] = 0
+        col[y][k] = 0
+        small[x/3][y/3][k] = 0
+        board[x][y] = 0
+
+go(0, 0)

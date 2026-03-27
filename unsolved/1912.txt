@@ -1,0 +1,15 @@
+A[i] : 0~i까지 합
+B[i] ; i~(N-1)까지 합
+dp1[i] : j = 0 ~ i까지 A[j] 최소
+dp2[i] : j = i~(N-1) A[j] 최소
+
+2 1 -4 3 4 -4 6 5 -5 1
+2 3 -1 2 6 2 8 13 8 9
+3 2 6 10 7 3 7 1 -4  1
+
+totalSum = A[n-1]
+result = totalSum - dp2[1]
+i = 1 ~ N-2
+result = max(temp, totalSum - (dp1[i-1]+dp2[i+1]))
+
+result = max(temp, totalSum - dp1[N-2])

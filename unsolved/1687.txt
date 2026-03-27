@@ -1,0 +1,19 @@
+
+int convertxy(int x, int y) {
+    return M*x+y;
+}
+
+int sums[0~(MN-1)]
+
+N행 M열
+maxSize = min(N, M)
+
+i = size : 1 ~  maxSize
+    j = 0; j+i-1<N : x 
+        k = 0; k+i-1<M : y
+            temp = 0
+            l = j; l<=j+i-1
+            if (l != 0)
+                temp += sums[convertxy(l, k+i-1)] - sums[convertxy(l-1), k+i-1] 
+            else:
+                temp += sums[convertxy(l, k+i-1)]

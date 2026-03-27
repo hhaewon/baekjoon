@@ -1,0 +1,18 @@
+가우스 소거법 이용
+a11 a12 a13 a14 = b1 -> 1 a12/a11 a13/a11 a14/a11 = b1/a11
+a21 a22 a23 a24 = b2 
+a31 a32 a33 a34 = b3
+a41 a42 a43 a44 = b4
+
+scala_mul(A, i, k, b) : 행렬 A의 i행에 k를 곱하기 
+sum_row(A, i, j, k, b) : 행렬 A의 i행에 k를 곱해서 j행에 더하기
+
+for i : 1 ~ N
+    scala_mul(A, i, 1/A[i][i], b)
+    for j : j!=i
+        sum_row(A, i, j, -A[j][i], b)
+
+for i : 1 ~ N
+    print(b[i])
+
+

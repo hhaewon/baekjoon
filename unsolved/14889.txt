@@ -1,0 +1,31 @@
+
+int start : start 팀 능력치
+int link : link 팀 능력치
+int startMan[10]
+int linkMan[10];
+int minDiff = 1e9+7: // 최소 능력치 차
+// index 현재 index, n 지금 까지 뽑은 스타트 링크 팀원
+
+int abs(int a, int b) {
+    if (a > b) {
+        return a-b;
+    } else {
+        return b-a;
+    }
+}
+
+go(index, n) {
+    if (index == n) {
+        if (abs(start, link) < minDiff) {
+            minDiff = abs(start, link);
+        }
+        return;
+    }
+    int preStart = start;
+    int preLink = link;
+    // index, 스타트 팀으로
+    S[i][index]다 추가 i in startMan
+    
+
+    // index, 링크 팀으로
+}

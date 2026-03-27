@@ -1,0 +1,5 @@
+int maxDistance(root):
+root를 루트노드로 할때 루트노드-리프노드 사이 거리 최댓값:
+
+for (child : children):
+    maxDistance = child.distance + maxDistance(child)

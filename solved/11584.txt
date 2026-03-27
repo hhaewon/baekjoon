@@ -1,0 +1,24 @@
+C : 칸토어 집합
+
+minIndex = 11
+
+solve(x, i, start) Ci에 x포함되지 않음 
+    size = 1/3^(i-1)
+    subsize = (1/3)^(i-1)
+    start + subsize < x < start+2subsize -> 포함x 
+
+    if ((x-start) % subsize == 1) -> minIndex  = i; return;
+    solve(x, i+1, start)
+    solve(x, i+1, start+2subsize)
+
+if (minIndex == 1) {
+    minIndex = -1
+}
+
+x = 1/2
+start = 0
+i = 1
+
+size = 1
+subsize = 1/3
+if(1/3< x < 2/3) 
