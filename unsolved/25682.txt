@@ -1,0 +1,2 @@
+white_first[i+1][j] = black_first[i][j] + something
+black_first
